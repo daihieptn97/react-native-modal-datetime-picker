@@ -26,6 +26,7 @@ const DateTimePickerModal = memo(
     if (!isVisible || !currentMode) return null;
 
     const handleChange = (event, date) => {
+      onHide(false);
       if (event.type === "dismissed") {
         onCancel();
         onHide(false);
